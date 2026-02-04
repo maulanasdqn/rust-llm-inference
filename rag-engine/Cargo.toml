@@ -1,0 +1,14 @@
+[package]
+name = "rag-engine"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow.workspace = true
+tokio.workspace = true
+rig-core = "0.1.0"
+llm-engine = { path = "../llm-engine/" }
+
+[[bin]]
+name = "rag"
+path = "./src/bin/rag.rs"
