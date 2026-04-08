@@ -1,14 +1,16 @@
 [package]
 name = "rag-engine"
 version = "0.1.0"
-edition = "2024"
+edition = "2021"
 
 [dependencies]
 anyhow.workspace = true
 tokio.workspace = true
-rig-core = "0.1.0"
+serde = { workspace = true }
+serde_json = { workspace = true }
+rig-core = "0.6"
 llm-engine = { path = "../llm-engine/" }
 
 [[bin]]
 name = "rag"
-path = "./src/bin/rag.rs"
+path = "src/bin/rag.rs"
